@@ -62,9 +62,9 @@ const showMePokemon = (pokemon) => {
     console.log(pokemon)
     const pokemonHTMLString = pokemon.map ( poke => `
         <ul class="card">
-            <img class="card-iomage" src="${poke.image}" />
+            <img class="card-image" src="${poke.image}" />
             <h2 class="card-title">${poke.id}. ${poke.name}</h2
-            <p class= "card-subtitle>Type: ${poke.type}</p>
+            <p class= "card-subtitle">Type: ${poke.type}</p>
         </ul>
     `
     )
@@ -72,3 +72,4 @@ const showMePokemon = (pokemon) => {
     pokedex.innerHTML = pokemonHTMLString;
 };
 fetchMikePokemon();
+
