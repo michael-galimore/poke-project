@@ -36,6 +36,8 @@
 // pokeBackImage.src = data['sprites']['back_default'] || '';
 
 // });
+const pokedex = document.getElementById('pokedex');
+console.log(pokedex);
 
 const fetchMikePokemon = () => {
 
@@ -57,6 +59,16 @@ Promise.all(promises).then(results => {
 };
 
 const showMePokemon = (pokemon) => {
-console.log(pokemon)
+    console.log(pokemon)
+    const pokemonHTMLString = pokemon.map ( poke => `
+        <ul class="card">
+            <img class="card-iomage" src="${poke.image}" />
+            <h2 class="card-title">${poke.id}. ${poke.name}</h2
+            <p class= "card-subtitle>Type: ${poke.type}</p>
+        </ul>
+    `
+    )
+    .join("");
+    pokedex.innerHTML = pokemonHTMLString;
 };
 fetchMikePokemon();
