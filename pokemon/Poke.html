@@ -11,13 +11,34 @@
     
 
 <div class="container">
-    
+
 <h1>PokeDex</h1>
     <ul id="pokedex"></ul>
 </div>
     
 
+<div class="search-wrapper">
+    <label for="search">Search Pokemon</label>
+    <input type="search" id="search">
+</div>
 
+<div id="poke-card">Searched Pokemon</div>
+
+<div class="poke-info">
+    <div id="poke-stats">
+        <img class= "poke-type-one"src="" alt="">
+        <h3 class="poke-weight"></h3>
+        <h3 class="poke-height"></h3>
+    </div>
+</div>
+<template data-poke-template>
+    <div class="card">
+        <h3 class="poke-name"></h3>
+        <h6 class="poke-type"></h6>
+        <p class="poke-weight"></p>
+        <p class="poke-height"></p>
+    </div>
+</template>
 
 <script src="poke-data.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
